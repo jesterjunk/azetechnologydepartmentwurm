@@ -1,0 +1,148 @@
+:root {
+    --color-scrollbar-thumb: #04AA6D;
+    --color-scrollbar-track: #302F2F;
+
+    --site-background-color: #302F2F;
+
+    --header-background-color: #688FC2;
+
+    --navigation-background-color: #35547C;
+    --navigation-border-color: #302F2F;
+
+    --navigation-button-text-color: #F2F2F2;
+
+    --navigation-button-active-color: #04AA6D;
+    --navigation-button-active-text-color: #FFFFFF;
+
+    --navigation-button-hover-background-color: #0DD4E2;
+    --navigation-button-hover-text-color: #000000;
+
+
+    --main-background-color: #646161;
+    --main-text-color: #FFFFFF;
+
+    --footer-background-color: #35547C;
+    --footer-text-color: #FFFFFF;
+    --footer-border-color: #302F2F;
+}
+
+html {
+/* This is for Firefox                                     */
+    scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+    scrollbar-width: thin;    /* options: auto (this is default), thin, none */
+}
+
+/* This is for Chrome and other webkit compatible browsers */
+::-webkit-scrollbar {
+    width: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar-thumb);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-scrollbar-track);
+}
+
+
+html {
+    background: var(--site-background-color);  /* site background color */
+
+    overflow-y: scroll;   /* keeps scrollbar track visible on all pages to stop
+                             the site from jumping left / right depending on the
+                             length of the page requiring a scroll bar or not */
+}
+
+body {
+    margin: 0;
+    margin-top: .5em;
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+
+div#outer_container {
+    display: flex;
+    flex-direction: column;
+}
+
+header .toplogo {
+    width: 100%;
+    background-color: var(--header-background-color);
+    align-items: center;
+}
+
+header .logo {
+    margin: 0 auto;
+    display: block;
+    max-width: 960px;
+    padding: 12px 0px 15px;
+}
+
+nav {
+    background-color: var(--navigation-background-color);
+    text-align: center;
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    border-top:    1px solid var(--navigation-border-color);
+    border-bottom: 1px solid var(--navigation-border-color);
+}
+
+/* Style the links inside the navigation bar */
+nav a {
+    color: var(--navigation-button-text-color);
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+    background-color: var(--navigation-button-hover-background-color);
+    color: var(--navigation-button-hover-text-color);
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+    background-color: var(--navigation-button-active-color);
+    color: var(--navigation-button-active-text-color);
+}
+
+main {
+    background-color: var(--main-background-color);  /* main background color */
+    text-align: center;
+    font-size: large;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+main section:first-of-type {
+    padding-top: 60px;
+}
+
+main section {
+    padding-bottom: 60px;
+}
+
+main section h3 {
+    margin: 0;
+}
+
+main section p {
+    margin: 0;
+    white-space: pre-line;
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    border-top: 1px solid var(--footer-border-color);
+    color: var(--footer-text-color);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
